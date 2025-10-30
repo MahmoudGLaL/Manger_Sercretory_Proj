@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
+
+/* @font-face {
+  font-family: 'NotoNaskhArabic';
+  src: url('/fonts/NotoNaskhArabic-Regular.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoNaskhArabic';
+  src: url('/fonts/NotoNaskhArabic-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoNaskhArabic';
+  src: url('/fonts/NotoNaskhArabic-SemiBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoNaskhArabic';
+  src: url('/fonts/NotoNaskhArabic-Bold.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+} */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+  }
+}
+/* 'NotoNaskhArabic' */
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family:   'sans-serif';
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.login_background {
+  background-image: url('../Images/login/sideLog.png');
+  background-repeat: repeat;
+  /* background-size: cover; */
+  /* flex-grow: 1; */
+  /* background-size: cover; */
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  /* background-position: left; */
+}
+.Toastify__toast {
+  font-weight: 700;
+  text-align: center;
+  font-weight : bold
+}
+
+
+/* Apply globally */

@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    // provider = "postgresql"
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+
+
+model Manger_Meetings {
+    id              Int     @id @default(autoincrement())
+    name            String  @db.VarChar(80)
+    type            String  @db.VarChar(15)
+    rank            String? @db.VarChar(20)
+    phoneNum        String? @db.VarChar(15)
+    has_oppointment String? @db.VarChar(5)
+    oppointment     String? @db.VarChar(55)
+    situation       String? @db.VarChar(15)
+    side            String  @db.VarChar(30)
+    region          String? @db.VarChar(70)
+    subject         String? @db.VarChar(100)
+    status          String  @default("انتظار") @db.VarChar(40)
+    // subject
+    // sound           String? @default("") @db.VarChar(25)
+    visit_times     String? @default("1") @db.VarChar(15)
+    order           Int?    @default(autoincrement())
+
+    // order           Int?   @default(autoincrement())
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+// delete every 1 year 
+
+model Users {
+    id        Int      @id @default(autoincrement())
+    // email       String        @unique
+    username  String   @db.VarChar(50)
+    password  String   @db.VarChar(30)
+    role      String   @db.VarChar(20)
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
